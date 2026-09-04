@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAMPLE / SYNTHETIC VAST 4.2 InLine tag (illustrative, not a live ad). Structure per IAB VAST spec. -->
+<VAST version="4.2">
+  <Ad id="clean-linear-001">
+    <InLine>
+      <AdSystem version="1.0">Google Ad Manager</AdSystem>
+      <AdTitle>Sample Video Ad — Clean Integration</AdTitle>
+      <Impression><![CDATA[https://example-adserver.test/imp?id=clean-001]]></Impression>
+      <Error><![CDATA[https://example-adserver.test/error?code=[ERRORCODE]]]></Error>
+      <AdVerifications>
+        <Verification vendor="omid.google.com">
+          <JavaScriptResource apiFramework="omid" browserOptional="true"><![CDATA[https://example.test/omid.js]]></JavaScriptResource>
+        </Verification>
+      </AdVerifications>
+      <Creatives>
+        <Creative id="1" sequence="1">
+          <Linear skipoffset="00:00:05">
+            <Duration>00:00:15</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://example.test/t?e=start]]></Tracking>
+              <Tracking event="firstQuartile"><![CDATA[https://example.test/t?e=q1]]></Tracking>
+              <Tracking event="midpoint"><![CDATA[https://example.test/t?e=mid]]></Tracking>
+              <Tracking event="thirdQuartile"><![CDATA[https://example.test/t?e=q3]]></Tracking>
+              <Tracking event="complete"><![CDATA[https://example.test/t?e=complete]]></Tracking>
+            </TrackingEvents>
+            <VideoClicks>
+              <ClickThrough><![CDATA[https://advertiser.example/landing]]></ClickThrough>
+            </VideoClicks>
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="video/mp4" width="1280" height="720" bitrate="2000"><![CDATA[https://cdn.example.test/hi.mp4]]></MediaFile>
+              <MediaFile delivery="progressive" type="video/mp4" width="854" height="480" bitrate="900"><![CDATA[https://cdn.example.test/mid.mp4]]></MediaFile>
+              <MediaFile delivery="progressive" type="video/webm" width="640" height="360" bitrate="500"><![CDATA[https://cdn.example.test/lo.webm]]></MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>

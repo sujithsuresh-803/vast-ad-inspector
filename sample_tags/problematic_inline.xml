@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SAMPLE / SYNTHETIC VAST 3.0 InLine tag with common partner integration mistakes (illustrative). -->
+<VAST version="3.0">
+  <Ad id="legacy-linear-042">
+    <InLine>
+      <AdSystem>PartnerAdServer</AdSystem>
+      <AdTitle>Legacy VPAID Ad — Problematic Integration</AdTitle>
+      <!-- MISSING: <Impression> beacon -->
+      <!-- MISSING: <Error> beacon, <AdVerifications> -->
+      <Creatives>
+        <Creative>
+          <Linear>
+            <Duration>00:00:30</Duration>
+            <TrackingEvents>
+              <Tracking event="start"><![CDATA[https://partner.test/t?e=start]]></Tracking>
+              <!-- MISSING: firstQuartile, midpoint, thirdQuartile, complete -->
+            </TrackingEvents>
+            <!-- MISSING: <VideoClicks>/<ClickThrough> -->
+            <MediaFiles>
+              <MediaFile delivery="progressive" type="application/x-shockwave-flash" apiFramework="VPAID" width="640" height="360" bitrate="400"><![CDATA[https://partner.test/vpaid.swf]]></MediaFile>
+            </MediaFiles>
+          </Linear>
+        </Creative>
+      </Creatives>
+    </InLine>
+  </Ad>
+</VAST>
